@@ -1,0 +1,24 @@
+# Terraform provider cache & plugin binaries
+.terraform/
+
+# State files (contain sensitive data; manage remotely with S3/Terraform Cloud)
+terraform.tfstate
+terraform.tfstate.backup
+
+# Override files (local dev only)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform lock file for providers (keep .terraform.lock.hcl — it should be committed)
+# .terraform.lock.hcl
+
+# Crash log
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+!example.tfvars
