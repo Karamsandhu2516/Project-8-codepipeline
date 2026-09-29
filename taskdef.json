@@ -1,0 +1,25 @@
+{
+  "executionRoleArn": "arn:aws:iam::387994677123:role/ecs-execution-role",
+  "taskRoleArn": "arn:aws:iam::387994677123:role/ecs-task-role",
+  "containerDefinitions": [
+    {
+      "name": "node-app",
+      "image": "<IMAGE1_NAME>",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
+  "family": "node-app-task"
+}
